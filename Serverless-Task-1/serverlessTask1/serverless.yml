@@ -1,0 +1,21 @@
+org: rakesh6401
+service: serverlessTask1
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.9
+  region: us-east-1   # optional, good practice
+  stage: dev          # default stage
+
+plugins:
+  - serverless-offline
+
+functions:
+  sendEmail:
+    handler: handler.send_email   # maps to handler.py -> def send_email(event, context)
+    events:
+      - http:
+          path: send-email
+          method: post
+          cors: true              # allow Postman/Browser testing

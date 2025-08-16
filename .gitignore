@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment files
+.env
+
+# Serverless
+.serverless/
+
+# VSCode
+.vscode/
